@@ -1,6 +1,12 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ArtikelController;
+use App\Http\Controllers\KontakController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MenuController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +22,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/menu/home', [MenuController::class, 'home']);
+Route::get('/menu/artikel', [MenuController::class, 'artikel0237']);
+Route::get('/menu/kontak', [MenuController::class, 'kontak0237']);
+Route::get('/menu', [MenuController::class, 'menu0237']);
